@@ -7,59 +7,163 @@
     tools:context=".Add_Profile">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="407dp"
-            android:layout_height="88dp"
+            android:id="@+id/titleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:gravity="center"
             android:orientation="horizontal"
             android:padding="20dp">
 
             <TextView
+                android:id="@+id/tile"
+                android:layout_width="87dp"
+                android:layout_height="wrap_content"
+                android:text="Datos"
+                android:textAlignment="center"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/nom"
                 android:layout_width="51dp"
                 android:layout_height="30dp"
                 android:text="Nom" />
 
             <EditText
-                android:layout_width="223dp"
+                android:id="@+id/inputNom"
+                android:layout_width="340dp"
                 android:layout_height="wrap_content" />
-
-
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/adreçaLayout"
             android:layout_width="match_parent"
-            android:layout_height="109dp"
-            android:padding="20dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp">
 
             <TextView
+                android:id="@+id/adreça"
                 android:layout_width="51dp"
                 android:layout_height="30dp"
                 android:text="Adreça" />
 
             <EditText
-                android:layout_width="223dp"
+                android:id="@+id/inputAdreça"
+                android:layout_width="340dp"
                 android:layout_height="wrap_content" />
         </LinearLayout>
+
         <LinearLayout
+            android:id="@+id/spinner"
             android:layout_width="match_parent"
-            android:layout_height="109dp"
-            android:padding="20dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <Spinner
+                android:id="@+id/spinnerPhoneType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutTel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp">
 
             <TextView
+                android:id="@+id/telefon"
                 android:layout_width="51dp"
                 android:layout_height="30dp"
+                android:contentDescription="tel"
                 android:text="Telefon" />
 
             <EditText
-                android:layout_width="223dp"
-                android:layout_height="wrap_content" />
+                android:id="@+id/inputTel"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="tel" />
         </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layoutBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/entrega"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tipus d'entrega:"
+                android:textSize="20dp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Recolliga en botiga" />
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Domicili" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/Btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Desa"
+                android:backgroundTint="#A6003737"/>
+
+
+        </LinearLayout>
+
     </LinearLayout>
 
 
