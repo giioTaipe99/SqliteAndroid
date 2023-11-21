@@ -127,6 +127,7 @@
                 android:textSize="20dp" />
 
             <RadioGroup
+                android:id="@+id/radioGroup"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
