@@ -1,10 +1,9 @@
 package com.example.myapplication;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
-import androidx.annotation.Nullable;
 
 public class MyDataBase extends SQLiteOpenHelper {
 
@@ -16,7 +15,7 @@ public class MyDataBase extends SQLiteOpenHelper {
     private static final String COLUM_ID = "_id";
     private static final String COLUM_NAME = "name";
     private static final String COLUM_MAIL = "mail";
-    private static final String COLUM_BANK = "BANK";
+    private static final String COLUM_TEL = "telefon";
 
     public MyDataBase(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION  );
@@ -29,7 +28,7 @@ public class MyDataBase extends SQLiteOpenHelper {
                 " ("+ COLUM_ID + " INTEGER PRIMARY KEY AUTOINCREMENT , "+
                 COLUM_NAME + "VARCHAR" +
                 COLUM_MAIL + "VARCHAR" +
-                COLUM_BANK + "VARCHAR );";
+                COLUM_TEL + "INTEGER );";
         db.execSQL(query);
     }
 
@@ -38,4 +37,16 @@ public class MyDataBase extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(db);
     }
+
+    void addProfile(String nom, String mail, int tel ){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        cv.put(COLUM_NAME, nom);
+        cv.put(COLUM_MAIL, mail);
+        cv.put(COLUM_TEL, tel);
+
+        db.insert(TABLE_NAME, null, cv);
+    }
+
 }

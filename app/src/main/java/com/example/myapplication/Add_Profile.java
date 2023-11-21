@@ -16,7 +16,7 @@ public class Add_Profile extends AppCompatActivity {
         Spinner spinnerPhoneType = findViewById(R.id.spinnerPhoneType);
 
         // Define las opciones del Spinner
-        String[] phoneTypes = {"Fijo", "Móvil", "Trabajo"};
+        String[] phoneTypes = {"Fix", "Mobil", "Feina"};
 
         // Crea un adaptador para el Spinner
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, phoneTypes);
@@ -26,3 +26,6 @@ public class Add_Profile extends AppCompatActivity {
         spinnerPhoneType.setAdapter(adapter);
     }
 }
+
+
+

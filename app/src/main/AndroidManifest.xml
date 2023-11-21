@@ -12,11 +12,14 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".Add_Profile"
-            android:label="Add Profile"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Add_Profile"
+            android:exported="false"
+            android:label="Modificar" />
+        <activity
+            android:name=".Profile"
             android:exported="true"
             android:label="Profiles">
             <intent-filter>

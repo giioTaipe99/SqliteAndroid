@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Add_Profile">
+    tools:context=".Add_Profile"
+    android:background="@drawable/background">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -30,9 +31,10 @@
                 android:id="@+id/tile"
                 android:layout_width="87dp"
                 android:layout_height="wrap_content"
-                android:text="Datos"
+                android:text="@string/title"
                 android:textAlignment="center"
                 android:textSize="25dp"
+                android:textColor="@color/white"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -48,12 +50,14 @@
                 android:id="@+id/nom"
                 android:layout_width="51dp"
                 android:layout_height="30dp"
-                android:text="Nom" />
+                android:textColor="@color/white"
+                android:text="@string/nom" />
 
             <EditText
                 android:id="@+id/inputNom"
                 android:layout_width="340dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="38dp"
+                android:background="#5BFFFFFF"/>
         </LinearLayout>
 
         <LinearLayout
@@ -67,50 +71,44 @@
                 android:id="@+id/adreça"
                 android:layout_width="51dp"
                 android:layout_height="30dp"
-                android:text="Adreça" />
+                android:textColor="@color/white"
+                android:text="@string/adreça" />
 
             <EditText
                 android:id="@+id/inputAdreça"
                 android:layout_width="340dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="38dp"
+                android:background="#5BFFFFFF" />
         </LinearLayout>
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:padding="20dp">
+
 
             <Spinner
                 android:id="@+id/spinnerPhoneType"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutTel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="20dp">
-
-            <TextView
-                android:id="@+id/telefon"
-                android:layout_width="51dp"
-                android:layout_height="30dp"
-                android:contentDescription="tel"
-                android:text="Telefon" />
+                android:layout_width="62dp"
+                android:layout_height="38dp"
+                android:background="#5BFFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/inputTel"
-                android:layout_width="340dp"
-                android:layout_height="wrap_content"
-                android:contentDescription="tel" />
-        </LinearLayout>
+                android:layout_width="279dp"
+                android:layout_height="38dp"
+                android:background="#5BFFFFFF"
+                android:contentDescription="tel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         <LinearLayout
@@ -124,6 +122,7 @@
                 android:id="@+id/entrega"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:text="Tipus d'entrega:"
                 android:textSize="20dp" />
 
@@ -133,6 +132,7 @@
 
                 <RadioButton
                     android:id="@+id/radioButton"
+                    android:textColor="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Recolliga en botiga" />
@@ -140,6 +140,7 @@
                 <RadioButton
                     android:id="@+id/radioButton3"
                     android:layout_width="match_parent"
+                    android:textColor="@color/white"
                     android:layout_height="wrap_content"
                     android:text="Domicili" />
 
@@ -159,7 +160,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Desa"
-                android:backgroundTint="#A6003737"/>
+                android:backgroundTint="#5C220037"/>
 
 
         </LinearLayout>
